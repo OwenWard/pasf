@@ -5,7 +5,7 @@
 % this all runs now with the RES data
 
 
-baseWD = 'C:\Users\owenw\Google Drive\ImageData\pasf-master';
+baseWD = '/rigel/stats/users/ogw2103/pasf/';
 %dataPath = strcat(baseWD, '\data\');
 
 %NOTE: load GCaMP dataset
@@ -33,7 +33,7 @@ dataset_name = 'RES';
 %signal_type      = 'chbt';
 %clusteringMethod = 'phase';
 
-%signal_type      = 'gcamp';
+signal_type      = 'gcamp';
 clusteringMethod = 'phase';
 
 %clusteringMethod = 'modulus';
@@ -67,10 +67,10 @@ data = data(:, :, 500:end);
 
 %dataset_new_name = strcat(dataset_name, '500EndCropped', '_');
 
-dirname      = strcat( baseWD, '\', dataset_name, '_', signal_type, '_', clusteringMethod);
+dirname      = strcat( baseWD, '/', dataset_name, '_', signal_type, '_', clusteringMethod);
 %dirname      = strcat( baseWD, '/', dataset_new_name, '_', signal_type, '_', clusteringMethod);
 
-bfilename    = strcat( dirname, '\pasf' );
+bfilename    = strcat( dirname, '/pasf' );
 if exist(dirname) ~= 7,  mkdir( dirname );  end
 
 

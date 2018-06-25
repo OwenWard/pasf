@@ -192,8 +192,8 @@ function plot_clusters(Eigenvalues, Clusters, ClusterInfo, spatialDim, bfilename
 			axis equal tight;
 			set(gca, 'XTick', [], 'YTick', []);
 			colorbar;
-			title( strcat('#', num2str(i), ',', 'S:', num2str( ClusterInfo.CSizes(i) ), ... 
-				',', 'E:', num2str(ClusterInfo.CEnergy(i)) ) );
+			%title( strcat('#', num2str(i), ',', 'S:', num2str( ClusterInfo.CSizes(i) ), ... 
+			%	',', 'E:', num2str(ClusterInfo.CEnergy(i)) ) );
 		end
 		axesHandles = findobj( get(figureHandle, 'Children'), 'flat', 'Type', 'axes');
 		%axis(axesHandles,'square')
@@ -232,7 +232,7 @@ function plot_clusters(Eigenvalues, Clusters, ClusterInfo, spatialDim, bfilename
 		idxs = find(mem~=i);
 		plot( idxs, ClusterInfo.D(idxs, i), 'r*');
 		hold off;
-		title( strcat( 'C#', num2str(i), ', CS:', num2str(ClusterInfo.CSizes(i)) ) );
+		%title( strcat( 'C#', num2str(i), ', CS:', num2str(ClusterInfo.CSizes(i)) ) );
 		set( gca, 'XTick', [], 'YTick', [0, 1, 2], 'YLim', [0, 2] );
 	end
 
